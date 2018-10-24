@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BBIBBI</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css"  href="animate.min.css">
+<style type="text/css"></style>
+
+<body class="contain" style="background-color: #47693d;">
+
+	<div id="bibi" class="bibi">
+		<img src="bibi.png" style="width: 200px; height: auto;">
+	</div>
+<div class="mimi"><!--이모티콘 전체 박스-->
+	<div class="Box" style="top: 240px; left: 1150px;">
+		<img class="im" src="imti.png">
+	</div>
+	<div class="Box" style="top: 280px; left: 1150px;">
+		<img class="im1" src="imti.png">
+	</div>
+
+	<div class="Box" style="top: 320px; left: 1150px;">
+		<img class="im2" src="imti.png">
+	</div>
+
+	<div class="Box" style="top: 180px; left: 1300px;">
+		<img class="im3" src="imti.png">
+	</div>
+
+	<div class="Box" style="top: 220px; left: 1300px;">
+		<img class="im4" src="imti.png">
+	</div>
+
+	<div class="Box" style="top: 260px; left: 1300px;">
+		<img class="im5" src="imti.png">
+	</div>
+	<!--빨간색 이모티콘 시작-->
+	<div class="Box" style="top: 450px; left: 1050px;">
+		<img class="im6" src="imti2.png">
+	</div>
+
+	<div class="Box" style="top: 600px; left: 1050px;">
+		<img class="im7" src="imti2.png">
+	</div>
+
+	<div class="Box" style="top: 640px; left: 1050px;">
+		<img class="im8" src="imti2.png">
+	</div>
+
+	<div class="Box" style="top: 500px; left: 1200px;">
+		<img class="im9" src="imti2.png" >
+	</div>
+
+	<div class="Box" style="top: 540px; left: 1200px;">
+		<img class="im10" src="imti2.png">
+	</div>
+
+	<div class="Box" style="top: 580px; left: 1200px;">
+		<img class="im11" src="imti2.png">
+	</div>
+	<div class="Box2" style="top: 480px; left: 200px;">
+		<img class="im12" src="imti2.png" >
+	</div>
+
+	<div class="Box2" style="top: 480px; left: 360px;">
+		<img class="im13" src="imti2.png">
+	</div>
+
+	<div class="Box2" style="top:480px; left: 450px;">
+		<img class="im14" src="imti2.png">
+	</div>
+	<div class="Box" style="top: 300px; left: 270px;">
+		<img class="im15" src="imti.png">
+	</div>
+	<div class="Box" style="top: 300px; left: 310px;">
+		<img class="im16" src="imti.png">
+	</div>
+
+	<div class="Box" style="top: 300px; left: 350px;">
+		<img class="im7" src="imti.png">
+	</div>
+</div><!--이모티콘 전체 박스 끝-->
+	
+<!--선-->
+<div id="X" style="visibility: visible;">
+	<div class="X" style="" onmouseover="startR();" onmouseout="stopR();">
+		<img src="XXX.png" style="width: 500px; height: 120px; ">
+	</div>
+
+<!--옐로우카드-->
+	<div id="yellow">
+		<img src="yellow.png" style="width: 200px; height: auto; opacity: 0.3;">
+	</div>
+</div>
+<!--옐로우 카드 여러개 스크립트-->
+	<div id="newCs"></div>
+
+	<script type="text/javascript">
+
+		var repeater
+		function startR(){
+			repeater = setInterval(X, 1000);
+		}
+		function stopR(){
+			clearInterval(repeater);
+			newCs.innerHTML = "";
+
+		}
+
+			function X() {
+			for(var i = 0; i < 10; i++){
+				var c = document.getElementById("yellow");
+				var newc = c.cloneNode(true);
+				newc.style.left = Math.random()*1300 + "px";
+				newc.style.top = Math.random()*550 + "px";
+				newCs.appendChild(newc);
+		};
+			}
+
+	</script>
+
+<!--에러창-->
+	<div id="error" style="top: 300px; left: 650px; visibility: hidden;">
+		<img src="error.png" style="width: 300px; height: auto;">
+	</div>
+
+	<div id="newDs" style=" position: absolute; width: 300px; height: 400px;"></div>
+<!--삐삐-->
+<div id = BBi style="visibility: visible;">
+	<div class="bbe" id="ff">
+		<img src="ma.png" style="width: 200px; height: auto;">
+			<span class="tooltiptext">will you click me?</span>
+	</div>
+	<div class="bbe1" id="aa" style="top: 300px;">
+		<img src="ma.png" style="width: 200px; height: auto;">
+		<span class="tooltiptext1">You'd better not.</span>
+	</div>
+	<div class="bbe2" id="gg" style="top: 580px;">
+		<img src="ma.png" style="width: 200px; height: auto;">
+		<span class="tooltiptext2">I warned you.</span>
+	</div>
+
+<!--삐삐안에 메세지-->
+	<div class="text" style=" top: 47px; left: 130px;">
+		<p>1142</p>
+	</div>
+	<div class="text" style=" top: 327px; left: 130px;">
+		<p>1818</p>
+	</div>
+	<div class="text" style=" top: 607px; left: 155px;">
+		<p>75</p>
+	</div>
+</div><!--삐삐전체 박스-->
+<!--삐삐 클릭시-->
+	<script type="text/javascript">
+		
+		var toggle = "off";
+		var b = document.getElementById("ff" );
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+
+		var toggle = "off";
+		var b = document.getElementById("aa");
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+	</script>
+
+	
+
+	<script type="text/javascript">
+		var toggle = "off";
+		var b = document.getElementById("gg");
+
+			b.onclick = function(){
+				if (toggle == "off"){
+					var d = document.getElementById("error");
+					d.style.visibility = "visible";
+					for (var i = 0; i<10; i++) {
+					var newd = d.cloneNode(true);
+					newd.style.left = Math.random()*1000 + "px";
+					newd.style.top = Math.random()*550 + "px";
+					newDs.appendChild(newd);}
+
+					toggle = "on";
+				}else if (toggle == "on"){
+					var d = document.getElementById("error");
+					d.style.visibility = "hidden";
+					newDs.innerHTML = "";
+
+					toggle = "off";
+			}}
+	</script>
+
+
+<!--스크롤 텍스트-->
+	<div id="scroll" class="scroll">
+		<p style="transform: rotate(-90deg); width: 1250px; ">
+		<marquee bavior="scroll" diretion="right" scrollamount="15" >
+			Please keep the line &emsp; Hello hello stupid? &emsp; Not my business &emsp; Cause we dont know Balance</marquee></p>
+	</div>
+
+
+	<div id="bigbox" class="bigbox">
+		<img class="bigim" src="imti.png">
+	</div>
+	<div id="dim">
+		<img src="sim.gif">
+	</div>
+	<div id="dimS" style="z-index: 10009;"></div>
+	<div id="gasabox">
+			<div id="gasa" style="width: 410px; height: 400px;"></div> 
+	</div>
+	<div id="gasabox2">
+		<div id="gasa2" style="width: 200px; height: 800px; "></div> 
+	</div>
+
+		<script type="text/javascript">
+		
+		var simson = "off";
+		var c = document.getElementById("bigbox");
+
+		c.onclick = function (){
+			if (simson == "off") {
+				
+				document.getElementById("BBi").style.visibility = "hidden";
+				document.getElementById("scroll").style.visibility = "hidden";
+				document.getElementById("X").style.visibility = "hidden";
+				document.getElementById("bibi").style.visibility = "hidden";
+
+				
+
+				var total = 0;
+				for (var i = 0; i<6; i++) {
+					
+					var e = document.getElementById("dim");
+					e.style.display = "block";
+					var f = e.cloneNode(true);
+					f.className = "sim";
+					f.style.left = 225 * i + "px";
+					
+					f.style.animation = "drop5" + 0.5 + "s" + "infinite";
+					f.style.animationDelay = i*0.1 + "s";
+
+					dimS.appendChild(f);
+				}
+				
+				var i =0,text;
+				text = "쟤는 대체 왜 저런 옷을 좋아한담? 기분을 알 수 없는 저 표정은 뭐람? 태가 달라진 건 아마 스트레스 때문인가?  꼿꼿하게 걷다가 삐끗 넘어질라  다들 수군대는 걸 자긴 아나 몰라? 요새 말이 많은 걔랑 어울린다나? "
+				function typing() {
+					if(i<text.length){
+				document.getElementById("gasa").innerHTML += text.charAt(i);
+				i++;
+				repeater1 = setTimeout(typing,50);
+					}
+				}
+				typing();
+
+				var k =0,text2;
+				text2 = "Yellow CARD 이 선 넘으면 침범이야 beep 매너는 여기까지 it's mine line Please keep the line Hello stupid 그 선 넘으면 정색이야 beep-- Stop it 거리 유지해 cause we don't know Comma we don't owe 깜빡이 켜 교양이 없어 너 더 상대 안해 참 쉽지 right?"
+				function typing2(){
+					if(k<text2.length){
+						document.getElementById("gasa2").innerHTML += text2.charAt(k);
+						k++;
+						repeater = setTimeout(typing2,50);	
+					}
+				}
+				typing2();
+				simson = "on";
+
+			}else if (simson == "on") {
+				clearTimeout(repeater1);
+				clearTimeout(repeater);
+				document.getElementById("BBi").style.visibility = "visible"
+				document.getElementById("scroll").style.visibility = "visible";
+				document.getElementById("X").style.visibility = "visible";
+				document.getElementById("bibi").style.visibility = "visible";
+				document.getElementById("gasa").innerHTML = "";
+				document.getElementById("gasa2").innerHTML = "";
+
+				simson = "off";
+
+				dimS.innerHTML = "";
+				dim.style.display = "none";
+				
+			}
+
+		}
+
+	</script>
+
+	<div id="bigbox2" class="bigbox2">
+		<img class="bigim2" src="imti2.png">
+	</div>
+	
+	<div id="dimdim">
+		<img src="sim2.gif">
+	</div>
+
+	<div id="dimdimS" style="margin-top: 0; z-index: 10009;"></div>
+
+	<div id="gasabox3">
+		<div id="gasa3" style="width: 180px; height: 400px;"></div> 
+	</div>
+
+	<script type="text/javascript">
+			
+		var dada = "off";
+		var g = document.getElementById("bigbox2");
+
+		g.onclick = function (){
+			if (dada == "off") {
+
+				document.getElementById("BBi").style.visibility = "hidden";
+				document.getElementById("scroll").style.visibility = "hidden";
+				document.getElementById("X").style.visibility = "hidden";
+				document.getElementById("bibi").style.visibility = "hidden";
+
+				
+				var total = 0;
+				for(var i = 0; i<5; i++){
+					var a = document.getElementById("dimdim");
+					a.style.display = "block";
+					var b = a.cloneNode(true);
+					b.className = "six";
+					b.style.marginTop = 100 * i + "px";
+					b.style.left = 255 * i + "px";
+
+					b.style.animation = "drop6" + 0.5 + "s" + "infinite";
+					b.style.animationDelay = i*0.1 + "s";
+
+					dimdimS.appendChild(b);
+
+				}
+				var o =0,text3;
+				text3 = "It's me 나예요 다를 거 없이 요즘엔 뭔가요 내 가십 I don't care 당신의 비밀이 뭔지 저마다의 사정 역시 정중히 사양할게요 not my business 이대로 좋아요 talk talkless Still me 또예요 놀랄 거 없이 I'm sure you're gonna say my gosh"
+				function typing3() {
+					if(o<text3.length){
+						document.getElementById("gasa3").innerHTML += text3.charAt(o);
+						o++;
+						repeater = setTimeout(typing3,50);
+					}
+				}
+				typing3();
+
+				dada = "on";
+			}else if (dada == "on") {
+
+				dada = "off";
+
+				dimdimS.innerHTML = "";
+				dimdim.style.display = "none";
+
+				clearTimeout(repeater);
+				document.getElementById("BBi").style.visibility = "visible"
+				document.getElementById("scroll").style.visibility = "visible";
+				document.getElementById("X").style.visibility = "visible";
+				document.getElementById("bibi").style.visibility = "visible";
+				document.getElementById("gasa3").innerHTML = "";
+				
+				
+			}
+		}
+				
+	</script>
+
+
+</body>
+</html>

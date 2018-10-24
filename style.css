@@ -1,0 +1,120 @@
+
+	@font-face {font-family: "munro"; src:url("munro.ttf") format("opentype"); }
+	@font-face {font-family: "neo"; src:url("neodgm.ttf") format("opentype"); }	
+
+	.contain{position: relative;}
+	.bibi{position: absolute; width: 200px; height: auto; top: 150px; left: 630px; z-index: 9998; visibility: visible;}
+	.X{position: absolute; width: 500px; height: auto; top: 320px; left: 495px; z-index: 9999; background-color: rgba(128,36,20,0.5);}
+	#yellow{position: absolute; width: 200px; height: auto; animation: spin 4s linear infinite; z-index: 0; left: 650px;}
+	.Box{position: absolute; width: 50px; height: 100px; z-index: 9998;}
+	.Box2{position: absolute; width: 100px; height: 50px; z-index: 9998;}
+	
+	.im{position: absolute; animation: drop 0.6s infinite; width: 50px; height: auto; }
+	.im1{position: absolute; animation: drop 0.6s infinite; animation-delay: 0.3s; width: 50px; height: auto;}
+	.im2{position: absolute; animation: drop2 0.6s infinite; animation-delay: 0.6s; width: 50px; height: auto;}
+	.im3{position: absolute; animation: drop 0.6s infinite; animation-delay: 0.2s; width: 50px; height: auto;}
+	.im4{position: absolute; animation: drop 0.3s infinite; animation-delay: 0.6s; width: 50px; height: auto;}
+	.im5{position: absolute; animation: drop3 0.8s infinite; animation-delay: 0.4s; width: 50px; height: auto;}
+/*빨간 이모티콘*/
+	.im6{position: absolute; width: 50px; height: auto; animation: drop4 0.7s infinite;}
+	.im7{position: absolute; width: 50px; height: auto; animation: drop 0.6s infinite; animation-delay: 0.6s;}
+	.im8{position: absolute; width: 50px; height: auto; animation: drop 0.6s infinite; animation-delay: 0.3s;}
+	.im9{position: absolute; width: 50px; height: auto;}
+	.im10{position: absolute; width: 50px; height: auto;}
+	.im11{position: absolute; width: 50px; height: auto;}
+	.im12{position: absolute; width: 50px; height: auto; animation: side 0.6s infinite;}
+	.im13{position: absolute; width: 50px; height: auto; animation: side2 0.6s infinite; animation-delay: 0.3s;}
+	.im14{position: absolute; width: 50px; height: auto; animation: side2 0.6s infinite; animation-delay: 0.4s;}
+	.im15{position: absolute; width: 50px; height: auto;}
+	.im16{position: absolute; width: 50px; height: auto;}
+	.im17{position: absolute; width: 50px; height: auto;}
+
+	.bigbox{position: absolute; width: 150px; height: 150px; top: 30px; left: 1200px; 
+		animation: dropDown 2s infinite; animation-delay: 1s; animation-timing-function: ease-in-out; animation-direction: alternate-reverse;}
+	.bigim{position: absolute; width: 150px; height: auto; top: 30px; }
+	.bigbox:hover{animation-play-state: paused; cursor: pointer;}
+
+	.bigbox2{position: absolute; width: 150px; height: 150px; top: 30px; left: 1100px; animation: dropDown2 1.52s infinite; animation-delay: 1s; animation-timing-function: ease-in-out; animation-direction: alternate-reverse;}
+	.bigim2{position: absolute; width: 150px; height: auto; top: 30px; }
+	.bigbox2:hover{animation-play-state: paused; cursor: pointer;}
+/*삐삐*/
+	.bbe{position: absolute; width: 200px; height: auto; z-index: 9997; top: 20px; left: 30px; cursor: pointer;}
+	.tooltiptext{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe:hover .tooltiptext{visibility: visible;}
+	.bbe1{position: absolute; width: 200px; height: auto; z-index: 9997; top: 40px; left: 30px; cursor: pointer;}
+	.tooltiptext1{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe1:hover .tooltiptext1{visibility: visible;}
+	.bbe2{position: absolute; width: 200px; height: auto; z-index: 9997; top: 20px; left: 30px; cursor: pointer;}
+	.tooltiptext2{position: absolute; top: 60px; left: 200px; display: inline-block; font-family: "neo"; font-size: 1.1em;visibility: hidden; width: 200px; background-color:rgba(0,0,0,0.4); color: white; text-align: center; border-radius: 6px; padding: 5px 0;}
+	.bbe2:hover .tooltiptext2{visibility: visible;}
+	.text{position: absolute;  font-family: "neo"; font-size: 1.8em; z-index: 10000;}
+/*에러창*/
+	#error{position: absolute; z-index: 10001;}
+/*스크롤*/
+	.scroll{position: absolute; width: 700px; height: 100px; font-family: "neo"; font-size: 5.5em; visibility: visible;}
+	.scroll:hover{cursor: default; animation: XXX 0.8s infinite;}
+/*이모티콘 클릭시 나오는거*/
+	
+	#dim{position: absolute; display: none; z-index: 10001; width: 0px; height: 0px; animation: drop5 0.5s forwards; opacity: 0; transition: all 1s;}
+	#dimdim{position: absolute; display: none; z-index: 10001; width: 0px; height: 0px; animation: drop5 0.5s forwards; opacity: 0; transition: all 1s;}
+	#gasabox{position: absolute; width: 400px; height: 300px; top: 280px; left: 150px; visibility: visible; overflow: visible;}
+	#gasa{ font-family: "neo"; font-size: 1.4em; color:white; visibility: visible; line-height: 2.3em;}
+	#gasabox2{position: absolute; width: 200px; height: 800px; top: 190px; left: 680px;  overflow: visible; transform: rotate(-90deg);}
+	#gasa2{ font-family: "neo"; font-size: 1.4em; color: yellow;line-height: 2.3em; opacity: 0.7;}
+	#gasabox3{position: absolute; width: 150px; height: 300px; top: 500px; left: 120px;  overflow: visible; transform: rotate(-90deg);}
+	#gasa3{ font-family: "neo"; font-size: 1.4em; color: yellow; line-height: 2.3em; opacity: 0.7;}
+	#gasabox4{position: absolute; width: 400px; height: 300px; top: 280px; left: 180px; visibility: visible; overflow: visible;}
+	#gasa4{ font-family: "neo"; font-size: 1.4em; color:white; visibility: visible; line-height: 2.3em;}
+
+
+	@keyframes drop {
+			from{top: 0; opacity: 1;}
+			to{top: 30px; opacity: 0.5;}
+		}
+	@keyframes drop2 {
+			from{top: 0;}
+			to{top: 50px;}		
+		}
+	@keyframes drop3 {
+			from{top: 0;}
+			to{top: 100px;}		
+		}
+	@keyframes drop4 {
+			from{top: 0;}
+			to{top: 130px;}		
+		}
+	@keyframes drop5 {
+			from{top: 0; opacity: 0.2;}
+			to{top: 10px; opacity: 1;}		
+		}
+	@keyframes drop6 {
+			from{top: 0; opacity: 0.2;}
+			to{top: 60px; opacity: 1;}		
+		}
+
+	@keyframes dropDown {
+			from{top: 0;}
+			to{top: 400px;}
+	}
+	@keyframes dropDown2 {
+			from{top: 0px;}
+			to{top: 430px;}
+	}
+	@keyframes side {
+			from{left: 130px;}
+			to{left: 20px;}
+	}
+	@keyframes side2 {
+			from{left: 40px; opacity: 1;}
+			to{left: 0px; opacity: 0.5;}
+	}
+	@keyframes spin {
+ 		to {transform: rotateY(360deg) rotateZ(0deg) rotateX(360deg);}}
+ 	@keyframes XXX {
+         0% {color : #fe0058; opacity: 1;}
+         20% {color: #fff100; opacity: 1;}
+         40% {color: #01bdd5; opacity: 1;}
+         60% {color: #01bdd5; opacity: 1;}
+         80% {color: #5b4c9a; opacity: 1;}
+         100% {color: #00E1FF; opacity: 1;}
+     }
